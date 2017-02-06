@@ -54,5 +54,23 @@ namespace TextAdventureCS
                 }
             }
         }
+        public void PrintClear(int corX,int corY)
+        {
+            Console.SetCursorPosition(corX, corY);
+            Console.WriteLine(' ');
+            Console.SetCursorPosition(corXNull, corYNull);
+        }
+        public void PrintClear(int corX, int corY, int corX2, int corY2)
+        {
+            for (int X = corX; X < corX2; X++)
+            {
+                for (int Y = corY; Y < corY2; Y++)
+                {
+                    Console.SetCursorPosition(X, Y);
+                    Console.WriteLine('Q');
+                }
+            }
+            Console.SetCursorPosition(corXNull, corYNull);
+        }
     }
 }

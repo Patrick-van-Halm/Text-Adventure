@@ -15,7 +15,6 @@ namespace TextAdventureCS
     {
         static void Main(string[] args)
         {
-            
         }
         //// Define the directions available to the player.
         //// Refactored by Michiel and Alex

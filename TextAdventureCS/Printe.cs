@@ -20,11 +20,18 @@ namespace TextAdventureCS
             Console.WriteLine(message);
             Console.SetCursorPosition(corXNull, corYNull);
         }
-        public void PrintMessage(int corX, int corY, string message, int backgroundCollor, int frontCollor)
+        public void PrintMessage(int corX, int corY, string message, int backgroundColor, int frontColor)
         {
+            color.BackgroundColor background = new color.BackgroundColor();
+            color.FrontColor front = new color.FrontColor();
             Console.SetCursorPosition(corX, corY);
+            background.setBackgroundColor(backgroundColor);
+            front.setFontColor(frontColor);
             Console.WriteLine(message);
             Console.SetCursorPosition(corXNull, corYNull);
+            background.setBackgroundColor(0);
+            front.setFontColor(14);
+
         }
     }
 }

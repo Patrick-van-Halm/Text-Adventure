@@ -15,6 +15,9 @@ namespace TextAdventureCS
     {
         static void Main(string[] args)
         {
+            Printe print = new Printe();
+            print.PrintMessage(2, 2, "ik ben timo", 14, 0);
+            print.PrintMessage(2, 3, "ik ben niet timo");
         }
         //// Define the directions available to the player.
         //// Refactored by Michiel and Alex

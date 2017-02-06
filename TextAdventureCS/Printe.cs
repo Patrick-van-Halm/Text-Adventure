@@ -19,7 +19,12 @@ namespace TextAdventureCS
             Console.SetCursorPosition(corX, corY);
             Console.WriteLine(message);
             Console.SetCursorPosition(corXNull, corYNull);
-
+        }
+        public void PrintMessage(int corX, int corY, string message, int backgroundCollor, int frontCollor)
+        {
+            Console.SetCursorPosition(corX, corY);
+            Console.WriteLine(message);
+            Console.SetCursorPosition(corXNull, corYNull);
         }
     }
 }

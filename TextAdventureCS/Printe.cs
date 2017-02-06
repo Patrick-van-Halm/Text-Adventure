@@ -31,7 +31,28 @@ namespace TextAdventureCS
             Console.SetCursorPosition(corXNull, corYNull);
             background.setBackgroundColor(0);
             front.setFontColor(14);
-
+        }
+        public void PrintMessage(int corX, int corY, int backgroundColor, int frontColor)
+        {
+            color.BackgroundColor background = new color.BackgroundColor();
+            color.FrontColor front = new color.FrontColor();
+            Console.SetCursorPosition(corX, corY);
+            background.setBackgroundColor(backgroundColor);
+            front.setFontColor(frontColor);
+            Console.WriteLine(' ');
+            Console.SetCursorPosition(corXNull, corYNull);
+            background.setBackgroundColor(0);
+            front.setFontColor(14);
+        }
+        public void PrintClear()
+        {
+            for (int corX = 0; corX < 103; corX++)
+            {
+                for (int corY = 0; corY < 52; corY++)
+                {
+                    PrintMessage(corX, corY, " ");
+                }
+            }
         }
     }
 }

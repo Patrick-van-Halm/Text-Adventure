@@ -16,6 +16,11 @@ namespace TextAdventureCS
         static void Main(string[] args)
         {
             Frames.FaceFrame frame = new Frames.FaceFrame();
+            Printe print = new Printe();
+            for (int i = 0; i < 10; i++)
+            {
+                print.PrinteMessageGame(i.ToString());
+            }
             Console.ReadKey();
         }
         //// Define the directions available to the player.

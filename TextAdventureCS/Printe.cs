@@ -9,6 +9,7 @@ namespace TextAdventureCS
     {
         private int corXNull;
         private int corYNull;
+        string[] messageregels = new string[10];
         public Printe()
         {
             this.corXNull = 0;
@@ -43,6 +44,25 @@ namespace TextAdventureCS
             Console.SetCursorPosition(corXNull, corYNull);
             background.setBackgroundColor(0);
             front.setFontColor(14);
+        }
+        public void PrinteMessageGame(string message)
+        {
+            string temp;
+            for (int i = 1; i < 10; i++)
+            {
+                this.messageregels[i--] = this.messageregels[i];
+            }
+            this.messageregels[9] = message;
+            PrintMessage(3, 40, messageregels[0]);
+            PrintMessage(3, 41, messageregels[1]);
+            PrintMessage(3, 42, messageregels[2]);
+            PrintMessage(3, 43, messageregels[3]); 
+            PrintMessage(3, 44, messageregels[4]);
+            PrintMessage(3, 45, messageregels[5]);
+            PrintMessage(3, 46, messageregels[6]);
+            PrintMessage(3, 47, messageregels[7]);
+            PrintMessage(3, 48, messageregels[8]);
+            PrintMessage(3, 49, messageregels[9]);
         }
         public void PrintClear()
         {

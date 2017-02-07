@@ -46,13 +46,20 @@ namespace TextAdventureCS
 
         public void Eating(int healthToAdd)
         {
-            if(this.health < this.maxHealth)
+            Printe printe = new Printe();
+            if (this.health < this.maxHealth)
             {
                 int temp = this.maxHealth - this.health;
                 if(healthToAdd > temp)
+                {
                     this.health = this.maxHealth;
+                    printe.PrinteMassageGameHunger(this.health);
+                }
                 else
+                {
                     this.health += healthToAdd;
+                    printe.PrinteMassageGameHunger(this.health);
+                }
             }
         }
 

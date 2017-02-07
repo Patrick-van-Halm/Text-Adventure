@@ -44,6 +44,18 @@ namespace TextAdventureCS
             this.hunger -= 4;
         }
 
+        public void Eating(int healthToAdd)
+        {
+            if(this.health < this.maxHealth)
+            {
+                int temp = this.maxHealth - this.health;
+                if(healthToAdd > temp)
+                    this.health = this.maxHealth;
+                else
+                    this.health += healthToAdd;
+            }
+        }
+
         public abstract void TakeHit();         
 
         public string GetName()

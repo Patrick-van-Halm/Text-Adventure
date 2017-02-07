@@ -14,7 +14,9 @@ namespace TextAdventureCS
             : base(name)
         {
             inventory = new Dictionary<string, Objects>();
-            this.money = 0;
+            this.money = 10;
+            Printe printe = new Printe();
+            printe.PrinteMessageGameMoney(this.money);
         }
 
         public void DropItem(string itemName)
@@ -110,12 +112,14 @@ namespace TextAdventureCS
         {
             Printe print = new Printe();
             this.money += ammountMoneyToAdd;
-            print.PrinteMessageGameMoney();
+            print.PrinteMessageGameMoney(this.money);
         }
 
         public void RemoveMoney(int ammountMoneyToRemove)
         {
+            Printe print = new Printe();
             this.money -= ammountMoneyToRemove;
+            print.PrinteMessageGameMoney(this.money);
         }
         public int GetMoney()
         {

@@ -23,3 +23,5 @@ C:\Users\Patrick\Documents\GitHub\Text-Adventure\TextAdventureCS\obj\x86\Debug\T
 C:\Users\Patrick\Documents\GitHub\Text-Adventure\TextAdventureCS\obj\x86\Debug\TextAdventureCS.pdb
 C:\Users\Patrick\Documents\GitHub\Text-Adventure\TextAdventureCS\bin\Debug\TextAdventureCS.exe
 C:\Users\Patrick\Documents\GitHub\Text-Adventure\TextAdventureCS\bin\Debug\TextAdventureCS.pdb
+C:\Users\Gebruiker\Documents\GitHub\Text-Adventure\TextAdventureCS\obj\x86\Debug\TextAdventureCS.exe
+C:\Users\Gebruiker\Documents\GitHub\Text-Adventure\TextAdventureCS\obj\x86\Debug\TextAdventureCS.pdb

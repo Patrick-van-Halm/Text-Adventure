@@ -14,8 +14,7 @@ namespace TextAdventureCS
         protected int maxHunger;
         protected int fatigue;
         protected int maxFatigue;
-        protected int money;
-        protected int mcDonalds;        
+        protected int money;       
 
 
 
@@ -29,7 +28,8 @@ namespace TextAdventureCS
             this.maxFatigue = 40;
             this.fatigue = maxFatigue;
             this.money = 10;
-            this.mcDonalds = 2;
+            Printe printe = new Printe();
+            
         }
 
         public void Tired()
@@ -38,10 +38,8 @@ namespace TextAdventureCS
         }
 
 
-        public void McKroket()
-        {
-            this.money -=
-        }
+        
+
 
 
         

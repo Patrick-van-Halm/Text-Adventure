@@ -14,7 +14,8 @@ namespace TextAdventureCS
         protected int maxHunger;
         protected int fatigue;
         protected int maxFatigue;
-        
+        protected int money;
+        protected int mcDonalds;        
 
 
 
@@ -27,12 +28,23 @@ namespace TextAdventureCS
             this.hunger = maxHunger;
             this.maxFatigue = 40;
             this.fatigue = maxFatigue;
+            this.money = 10;
+            this.mcDonalds = 2;
         }
 
         public void Tired()
         {
             this.fatigue -= 4;
         }
+
+
+        public void McKroket()
+        {
+            this.money -=
+        }
+
+
+        
 
         public void Hungry()
         {

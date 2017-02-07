@@ -108,7 +108,9 @@ namespace TextAdventureCS
         }
         public void AddMoney(int ammountMoneyToAdd)
         {
+            Printe print = new Printe();
             this.money += ammountMoneyToAdd;
+            print.PrinteMessageGameMoney();
         }
 
         public void RemoveMoney(int ammountMoneyToRemove)

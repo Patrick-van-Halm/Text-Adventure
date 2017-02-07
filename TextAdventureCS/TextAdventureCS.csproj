@@ -49,7 +49,7 @@
     <Compile Include="DateTime.cs" />
     <Compile Include="Frames\FaceFrame.cs" />
     <Compile Include="Location.cs" />
-    <Compile Include="Locations\Church.cs" />
+    <Compile Include="Locations\Bakker.cs" />
     <Compile Include="Locations\Cliff.cs" />
     <Compile Include="Locations\Forest.cs" />
     <Compile Include="Locations\Swamp.cs" />

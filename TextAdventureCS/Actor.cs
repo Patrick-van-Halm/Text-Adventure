@@ -29,27 +29,20 @@ namespace TextAdventureCS
             this.fatigue = maxFatigue;
             this.money = 10;
             Printe printe = new Printe();
-            
+            printe.PrinteMessageGameName(name);
+            printe.PrinteMassageGameHealth(this.health);
         }
 
         public void Tired()
         {
             this.fatigue -= 4;
         }
-
-
-        
-
-
-
-        
-
         public void Hungry()
         {
             this.hunger -= 4;
         }
 
-        public abstract void TakeHit(int damage);         
+        public abstract void TakeHit();         
 
         public string GetName()
         {

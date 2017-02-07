@@ -33,24 +33,25 @@ namespace TextAdventureCS.Frames
             print.PrintMessage(0, 37, "╠");
             print.PrintMessage(151, 41, "╣");
             print.PrintMessage(0, 41, "╠");
-            print.PrintMessage(4,38, "╔");
-            print.PrintMessage(44, 38, "╗");
-            print.PrintMessage(4, 39, "║");
-            print.PrintMessage(44, 39, "║");
-            print.PrintMessage(4, 40, "╚");
-            print.PrintMessage(44, 40, "╝");
-            print.PrintMessage(54, 38, "╔");
+
+            print.PrintMessage(2,38, "╔");
+            print.PrintMessage(43, 38, "╗");
+            print.PrintMessage(2, 39, "║");
+            print.PrintMessage(43, 39, "║");
+            print.PrintMessage(2, 40, "╚");
+            print.PrintMessage(43, 40, "╝");
+            print.PrintMessage(53, 38, "╔");
             print.PrintMessage(94, 38, "╗");
-            print.PrintMessage(54, 39, "║");
+            print.PrintMessage(53, 39, "║");
             print.PrintMessage(94, 39, "║");
-            print.PrintMessage(54, 40, "╚");
+            print.PrintMessage(53, 40, "╚");
             print.PrintMessage(94, 40, "╝");
             print.PrintMessage(104, 38, "╔");
-            print.PrintMessage(144, 38, "╗");
+            print.PrintMessage(145, 38, "╗");
             print.PrintMessage(104, 39, "║");
-            print.PrintMessage(144, 39, "║");
+            print.PrintMessage(145, 39, "║");
             print.PrintMessage(104, 40, "╚");
-            print.PrintMessage(144, 40, "╝");
+            print.PrintMessage(145, 40, "╝");
             //vak boven
             for (int i = 0; i < 9; i++)
             {

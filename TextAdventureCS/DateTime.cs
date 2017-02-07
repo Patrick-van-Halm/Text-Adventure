@@ -16,7 +16,6 @@ namespace TextAdventureCS
         private int dateMonths;
         private int dateDay;
         private Player p;
-        private Thread th;
 
         public DateTime(Player player, int dateYears = 0, int dateMonths = 0, int dateDay = 0, int timeHours = 0, int timeMin = 0, int timeSec = 1)
         {

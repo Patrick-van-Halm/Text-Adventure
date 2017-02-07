@@ -22,7 +22,7 @@ namespace TextAdventureCS
             Thread thread = new Thread(new ThreadStart(time.TimeCount));
             thread.Start();
             Printe print = new Printe();
-            Console.WriteLine("nou en");
+            player.TakeHit();
             Console.ReadKey();
         }
         //// Define the directions available to the player.

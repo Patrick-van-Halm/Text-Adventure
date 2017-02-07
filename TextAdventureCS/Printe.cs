@@ -72,9 +72,8 @@ namespace TextAdventureCS
         {
             PrintMessage(132, 3, time);
         }
-        public void PrinteMessageGameMoney(int money)
+        public void PrinteMessageGameMony()
         {
-            PrintMessage(132, 3, money.ToString());
         }
         public void PrinteMessageGameName()
         { }

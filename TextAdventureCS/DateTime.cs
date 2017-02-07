@@ -15,8 +15,9 @@ namespace TextAdventureCS
         private int dateYears;
         private int dateMonths;
         private int dateDay;
+        private Player p;
 
-        public DateTime(int dateYears = 1, int dateMonths = 1, int dateDay = 1, int timeHours = 12, int timeMin = 1, int timeSec = 1)
+        public DateTime(Player player, int dateYears = 1, int dateMonths = 1, int dateDay = 1, int timeHours = 12, int timeMin = 1, int timeSec = 1)
         {
             this.dateYears = dateYears;
             this.dateMonths = dateMonths;
@@ -26,11 +27,14 @@ namespace TextAdventureCS
             this.timeMin = timeMin;
             this.timeSec = timeSec;
 
+            this.p = player;
+
             this.TimeCount();
         }
 
         private void TimeCount()
         {
+
             for(; this.dateYears < 66; this.dateYears++)
             {
                 for(; this.dateMonths < 12; this.dateMonths++)
@@ -67,6 +71,8 @@ namespace TextAdventureCS
                                 this.timeSec = 1;
                             }
                             this.timeMin = 1;
+                            this.p.Hungry();
+                            this.p.Tired();
                         }
                         this.timeHours = 00;
                     }

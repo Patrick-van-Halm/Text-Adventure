@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace TextAdventureCS
+namespace TextAdventureCS.Locations
 {
-    class Swamp : Location
+    class Gym : Location
     {
-        public Swamp(string name)
+        public Gym(string name)
             : base(name)
         {
         }
 
         public override void Description()
         {
-            Console.WriteLine("You are standing in a swamp.");
+            Console.WriteLine("You are standing infront of the gym");
         }
     }
 }

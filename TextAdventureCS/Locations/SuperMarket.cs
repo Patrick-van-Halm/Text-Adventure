@@ -5,17 +5,16 @@ using System.Text;
 
 namespace TextAdventureCS
 {
-    class Church : Location
+    class SuperMarket : Location
     {
-        public Church(string name)
+        public SuperMarket(string name)
             : base(name)
         {
-
         }
 
         public override void Description()
         {
-            Console.WriteLine("You are standing in front of a church.");
+            Console.WriteLine("You are standing infront of the supermarket.");
         }
     }
 }

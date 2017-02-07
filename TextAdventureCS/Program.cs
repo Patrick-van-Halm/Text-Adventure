@@ -15,8 +15,8 @@ namespace TextAdventureCS
     {
         static void Main(string[] args)
         {
-            DateTime DT = new DateTime();
-            Console.ReadLine();
+            Frames.FaceFrame frame = new Frames.FaceFrame();
+            Console.ReadKey();
         }
         //// Define the directions available to the player.
         //// Refactored by Michiel and Alex

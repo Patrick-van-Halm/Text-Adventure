@@ -47,25 +47,25 @@ namespace TextAdventureCS
                             {
                                 for(; this.timeSec < 60; this.timeSec++)
                                 {
-                                    Console.SetCursorPosition(0, 0);
-                                    Console.WriteLine("                                                                ");
-                                    Console.SetCursorPosition(0, 0);
-                                    if (this.timeHours < 10 && this.timeMin < 10)
-                                    {
-                                        Console.WriteLine("[Year: {0} Month: {1} Day: {2} || 0{3}:0{4}:{5} ]", this.dateYears, this.dateMonths, this.dateDay, this.timeHours, this.timeMin, this.timeSec);
-                                    }
-                                    else if(this.timeHours < 10)
-                                    {
-                                        Console.WriteLine("[Year: {0} Month: {1} Day: {2} || 0{3}:{4}:{5} ]", this.dateYears, this.dateMonths, this.dateDay, this.timeHours, this.timeMin, this.timeSec);
-                                    }
-                                    else if(this.timeMin < 10)
-                                    {
-                                        Console.WriteLine("[Year: {0} Month: {1} Day: {2} || {3}:0{4}:{5} ]", this.dateYears, this.dateMonths, this.dateDay, this.timeHours, this.timeMin, this.timeSec);
-                                    }
-                                    else
-                                    {
-                                        Console.WriteLine("[Year: {0} Month: {1} Day: {2} || {3}:{4}:{5} ]", this.dateYears, this.dateMonths, this.dateDay, this.timeHours, this.timeMin, this.timeSec);
-                                    }
+                                    //Console.SetCursorPosition(0, 0);
+                                    //Console.WriteLine("                                                                ");
+                                    //Console.SetCursorPosition(0, 0);
+                                    //if (this.timeHours < 10 && this.timeMin < 10)
+                                    //{
+                                    //    Console.WriteLine("[Year: {0} Month: {1} Day: {2} || 0{3}:0{4}:{5} ]", this.dateYears, this.dateMonths, this.dateDay, this.timeHours, this.timeMin, this.timeSec);
+                                    //}
+                                    //else if(this.timeHours < 10)
+                                    //{
+                                    //    Console.WriteLine("[Year: {0} Month: {1} Day: {2} || 0{3}:{4}:{5} ]", this.dateYears, this.dateMonths, this.dateDay, this.timeHours, this.timeMin, this.timeSec);
+                                    //}
+                                    //else if(this.timeMin < 10)
+                                    //{
+                                    //    Console.WriteLine("[Year: {0} Month: {1} Day: {2} || {3}:0{4}:{5} ]", this.dateYears, this.dateMonths, this.dateDay, this.timeHours, this.timeMin, this.timeSec);
+                                    //}
+                                    //else
+                                    //{
+                                    //    Console.WriteLine("[Year: {0} Month: {1} Day: {2} || {3}:{4}:{5} ]", this.dateYears, this.dateMonths, this.dateDay, this.timeHours, this.timeMin, this.timeSec);
+                                    //}
                                     Thread.Sleep(10);
                                 }
                                 this.timeSec = 1;
@@ -80,6 +80,22 @@ namespace TextAdventureCS
                 }
                 this.dateMonths = 1;
             }
+        }
+        public string GetTime()
+        {
+            if(this.timeHours < 10 && this.timeMin < 10)
+                return ("0" + this.timeHours + ":0" + this.timeMin + ":" + this.timeSec); 
+            else if(this.timeHours < 10)
+                return ("0" + this.timeHours + ":" + this.timeMin + ":" + this.timeSec);
+            else if(this.timeMin < 10)
+                return (this.timeHours + ":0" + this.timeMin + ":" + this.timeSec);
+            else
+                return (this.timeHours + ":" + this.timeMin + ":" + this.timeSec);
+        }
+
+        public string GetDate()
+        {
+            return ("Year: " + this.dateYears + " Month: "+ this.dateMonths +" Day: " + this.dateDay);
         }
     }
 }

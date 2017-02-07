@@ -10,12 +10,27 @@ namespace TextAdventureCS
         protected string name;
         protected int maxHealth;
         protected int health;
-        
-        public Actor( string name, int maxHealth )
+        protected int hunger;
+        protected int maxHunger;
+        protected int fatigue;
+        protected int maxFatigue;
+
+
+
+        public Actor( string name)
         {
             this.name = name;
-            this.maxHealth = maxHealth;
+            this.maxHealth = 40;
             this.health = maxHealth;
+            this.maxHunger = 40;
+            this.hunger = maxHunger;
+            this.maxFatigue = 40;
+            this.fatigue = maxFatigue;
+        }
+
+        public void hungry()
+        {
+            this.hunger -= 4;
         }
 
         public abstract void TakeHit(int damage);         
@@ -34,5 +49,26 @@ namespace TextAdventureCS
         {
             return health;
         }
+
+        public int GetHunger()
+        {
+            return this.hunger;
+        }
+
+        public int GetMaxHunger()
+        {
+            return this.maxHunger;
+        }
+
+        public int GetFatigue()
+        {
+            return this.fatigue;
+        }
+
+        public int GetMaxFatigue()
+        {
+            return this.maxFatigue;
+        }
+       
     }
 }

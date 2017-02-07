@@ -10,8 +10,8 @@ namespace TextAdventureCS
         private Dictionary<string, Objects> inventory;
         private int money;
 
-        public Player(string name, int maxHealth)
-            : base(name, maxHealth)
+        public Player(string name)
+            : base(name)
         {
             inventory = new Dictionary<string, Objects>();
             this.money = 0;
@@ -66,41 +66,45 @@ namespace TextAdventureCS
 
         public override void TakeHit(int damage)
         {
-            if (health - damage < 0)
+            if(health >= 3)
             {
-                Console.Clear();
-                Console.WriteLine("You took too much damage. You fall to the ground.");
-                Console.WriteLine("As you move towards the light, the last thing going through");
-                Console.WriteLine("your mind is: 'This was a great adventure. Too bad it had");
-                Console.WriteLine("to end like this.' And then it is all over...");
-                Console.WriteLine("Press a key to continu...");
-                Console.ReadKey();
+                this.health -= 4;
             }
-            else
-            {
-                health -= damage;
-                Console.Clear();
-                Console.WriteLine("You took {0} points of damage.", damage);
-                Console.WriteLine("You now have {0} HP left.", health);
+        //    if (health - damage < 0)
+        //    {
+        //        Console.Clear();
+        //        Console.WriteLine("You took too much damage. You fall to the ground.");
+        //        Console.WriteLine("As you move towards the light, the last thing going through");
+        //        Console.WriteLine("your mind is: 'This was a great adventure. Too bad it had");
+        //        Console.WriteLine("to end like this.' And then it is all over...");
+        //        Console.WriteLine("Press a key to continu...");
+        //        Console.ReadKey();
+        //    }
+        //    else
+        //    {
+        //        health -= damage;
+        //        Console.Clear();
+        //        Console.WriteLine("You took {0} points of damage.", damage);
+        //        Console.WriteLine("You now have {0} HP left.", health);
 
-                if (health < (maxHealth >> 2))
-                {
-                    Console.WriteLine("You took some serious hits and you are bleeding.");
-                    Console.WriteLine("You start to feel weak and desperately need some");
-                    Console.WriteLine("medical attention.");
-                }
-                else if (health < (maxHealth >> 1))
-                {
-                    Console.WriteLine("You took some hits. You have some scratches and some cuts.");
-                    Console.WriteLine("Your body starts to ache and you have to be careful.");
-                }
-                else if (health < (maxHealth - (maxHealth >> 2)))
-                {
-                    Console.WriteLine("You have a few scratches, nothing to worry about yet.");
-                }
-                Console.WriteLine("Press a key to continue");
-                Console.ReadKey();
-            }
+        //    //    if (health < (maxHealth >> 2))
+        //    //    {
+        //    //        Console.WriteLine("You took some serious hits and you are bleeding.");
+        //    //        Console.WriteLine("You start to feel weak and desperately need some");
+        //    //        Console.WriteLine("medical attention.");
+        //    //    }
+        //    //    else if (health < (maxHealth >> 1))
+        //    //    {
+        //    //        Console.WriteLine("You took some hits. You have some scratches and some cuts.");
+        //    //        Console.WriteLine("Your body starts to ache and you have to be careful.");
+        //    //    }
+        //    //    else if (health < (maxHealth - (maxHealth >> 2)))
+        //    //    {
+        //    //        Console.WriteLine("You have a few scratches, nothing to worry about yet.");
+        //    //    }
+        //    //    Console.WriteLine("Press a key to continue");
+        //    //    Console.ReadKey();
+        //    //}
         }
         public void AddMoney(int ammountMoneyToAdd)
         {

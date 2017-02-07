@@ -21,7 +21,10 @@ namespace TextAdventureCS
             DateTime time = new DateTime(player);
             Thread thread = new Thread(new ThreadStart(time.TimeCount));
             thread.Start();
+            Thread.Sleep(1000);
             Printe print = new Printe();
+            player.TakeHit();
+            player.TakeHit();
             player.TakeHit();
             Console.ReadKey();
         }

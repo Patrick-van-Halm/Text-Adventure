@@ -31,6 +31,8 @@ namespace TextAdventureCS
             Printe printe = new Printe();
             printe.PrinteMessageGameName(name);
             printe.PrinteMassageGameHealth(this.health);
+            printe.PrinteMassageGameFatigue(this.fatigue);
+            printe.PrinteMassageGameHunger(this.hunger);
         }
 
         public void Tired()

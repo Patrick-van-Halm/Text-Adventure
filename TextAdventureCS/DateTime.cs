@@ -65,9 +65,9 @@ namespace TextAdventureCS
                                     //    Console.WriteLine("[Year: {0} Month: {1} Day: {2} || {3}:{4}:{5} ]", this.dateYears, this.dateMonths, this.dateDay, this.timeHours, this.timeMin, this.timeSec);
                                     //}
                                     Thread.Sleep(10);
-                                    print.PrinteMessageGameTime(GetTime());
                                 }
                                 this.timeSec = 1;
+                                print.PrinteMessageGameTime(GetTime());
                             }
                             this.timeMin = 1;
                             this.p.Hungry();
@@ -84,13 +84,13 @@ namespace TextAdventureCS
         public string GetTime()
         {
             if(this.timeHours < 10 && this.timeMin < 10)
-                return ("0" + this.timeHours + ":0" + this.timeMin + ":" + this.timeSec); 
+                return ("hour: " + "0" + this.timeHours + " | min: 0" + this.timeMin); 
             else if(this.timeHours < 10)
-                return ("0" + this.timeHours + ":" + this.timeMin + ":" + this.timeSec);
+                return ("hour: " + "0" + this.timeHours + " | min: " + this.timeMin);
             else if(this.timeMin < 10)
-                return (this.timeHours + ":0" + this.timeMin + ":" + this.timeSec);
+                return ("hour: " + this.timeHours + " | min: 0" + this.timeMin);
             else
-                return (this.timeHours + ":" + this.timeMin + ":" + this.timeSec);
+                return ("hour: " + this.timeHours + " | min: " + this.timeMin);
         }
 
         public string GetDate()

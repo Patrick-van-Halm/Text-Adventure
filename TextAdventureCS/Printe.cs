@@ -12,7 +12,7 @@ namespace TextAdventureCS
         string[] messageregels = new string[10];
         public Printe()
         {
-            this.corXNull = 0;
+            this.corXNull = 154;
             this.corYNull = 0;
         }
         public void PrintMessage(int corX, int corY, string message)
@@ -72,18 +72,121 @@ namespace TextAdventureCS
         {
             PrintMessage(132, 3, time);
         }
-        public void PrinteMessageGameMony()
+        public void PrinteMessageGameMoney(int money)
         {
+            PrintMessage(132, 5,"money: "+ money);
         }
-        public void PrinteMessageGameName()
-        { }
+        public void PrinteMessageGameName(string name)
+        {
+            PrintMessage(132, 7, name);
+        }
+        public void PrinteMassageGameHealth(int health)
+        {
+            int corY = 39;
+            int corX = 3;
+            Printe print = new Printe();
+            color.BackgroundColor background = new color.BackgroundColor();
+            for (int i = 0; i < 40; i++)
+            {
+                if (health > 0)
+                {
+                    Console.SetCursorPosition(corX, corY);
+                    background.setBackgroundColor(13);
+                    Console.WriteLine(' ');
+                    Console.SetCursorPosition(corXNull, corYNull);
+                    background.setBackgroundColor(0);
+                    health -= 1;
+                    corX += 1;
+                }
+                else
+                {
+                    Console.SetCursorPosition(corX, corY);
+                    background.setBackgroundColor(0);
+                    Console.WriteLine(' ');
+                    Console.SetCursorPosition(corXNull, corYNull);
+                    background.setBackgroundColor(0);
+                    corX += 1;
+                }
+            }
+            Console.SetCursorPosition(corXNull, corYNull);
+            background.setBackgroundColor(0);
+            Console.WriteLine(' ');
+        }
+        public void PrinteMassageGameFatigue(int health)
+        {
+            int corY = 39;
+            int corX = 54;
+            Printe print = new Printe();
+            color.BackgroundColor background = new color.BackgroundColor();
+            for (int i = 0; i < 40; i++)
+            {
+                if (health > 0)
+                {
+                    Console.SetCursorPosition(corX, corY);
+                    background.setBackgroundColor(1);
+                    Console.WriteLine(' ');
+                    Console.SetCursorPosition(corXNull, corYNull);
+                    background.setBackgroundColor(0);
+                    health -= 1;
+                    corX += 1;
+                }
+                else
+                {
+                    Console.SetCursorPosition(corX, corY);
+                    background.setBackgroundColor(0);
+                    Console.WriteLine(' ');
+                    Console.SetCursorPosition(corXNull, corYNull);
+                    background.setBackgroundColor(0);
+                    corX += 1;
+                }
+            }
+            Console.SetCursorPosition(corXNull, corYNull);
+            background.setBackgroundColor(0);
+            Console.WriteLine(' ');
+        }
+        public void PrinteMassageGameHunger(int health)
+        {
+            int corY = 39;
+            int corX = 105;
+            Printe print = new Printe();
+            color.BackgroundColor background = new color.BackgroundColor();
+            for (int i = 0; i < 40; i++)
+            {
+                if (health > 0)
+                {
+                    Console.SetCursorPosition(corX, corY);
+                    background.setBackgroundColor(15);
+                    Console.WriteLine(' ');
+                    Console.SetCursorPosition(corXNull, corYNull);
+                    background.setBackgroundColor(0);
+                    health -= 1;
+                    corX += 1;
+                }
+                else
+                {
+                    Console.SetCursorPosition(corX, corY);
+                    background.setBackgroundColor(0);
+                    Console.WriteLine(' ');
+                    Console.SetCursorPosition(corXNull, corYNull);
+                    background.setBackgroundColor(0);
+                    corX += 1;
+                }
+            }
+            Console.SetCursorPosition(corXNull, corYNull);
+            background.setBackgroundColor(0);
+            Console.WriteLine(' ');
+        }
         public void PrintClear()
         {
+            
             for (int corX = 0; corX < 103; corX++)
             {
                 for (int corY = 0; corY < 52; corY++)
                 {
-                    PrintMessage(corX, corY, " ");
+                    color.BackgroundColor background = new color.BackgroundColor();
+                    Console.SetCursorPosition(corX, corY);
+                    background.setBackgroundColor(0);
+                    Console.WriteLine(' ');
                 }
             }
         }

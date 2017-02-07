@@ -49,10 +49,6 @@
     <Compile Include="DateTime.cs" />
     <Compile Include="Frames\FaceFrame.cs" />
     <Compile Include="Location.cs" />
-    <Compile Include="Locations\Bakker.cs" />
-    <Compile Include="Locations\Cliff.cs" />
-    <Compile Include="Locations\Forest.cs" />
-    <Compile Include="Locations\Swamp.cs" />
     <Compile Include="Map.cs" />
     <Compile Include="Objects.cs" />
     <Compile Include="Items\Diamond.cs" />
@@ -62,7 +58,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Timer.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Locations\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

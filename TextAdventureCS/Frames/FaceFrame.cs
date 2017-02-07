@@ -54,36 +54,36 @@ namespace TextAdventureCS.Frames
             //vak boven
             for (int i = 0; i < 9; i++)
             {
-                print.PrintMessage(111, i, "║");
+                print.PrintMessage(131, i, "║");
             }
             for (int i = 0; i < 7; i++)
             {
-                print.PrintMessage(131, i, "║");
+                print.PrintMessage(151, i, "║");
             }
-            for (int i = 111; i < 131; i++)
+            for (int i = 131; i < 151; i++)
             {
                 print.PrintMessage(i, 2, "═");
                 print.PrintMessage(i, 4, "═");
             }
-            for (int i = 111; i < 151; i++)
+            for (int i = 131; i < 151; i++)
             {
                 print.PrintMessage(i, 6, "═");
                 print.PrintMessage(i, 8, "═");
             }
-            print.PrintMessage(111, 0, "╦");
+            print.PrintMessage(131, 0, "╦");
             for (int i = 2; i < 7; i+=2)
             {
-                print.PrintMessage(111, i, "╠");
+                print.PrintMessage(131, i, "╠");
             }
-            print.PrintMessage(131, 0, "╦");
+            print.PrintMessage(151, 0, "");
             for (int i = 2; i < 5; i += 2)
             {
-                print.PrintMessage(131, i, "╣");
+                print.PrintMessage(151, i, "╣");
             }
-            print.PrintMessage(131, 6, "╩");
+            print.PrintMessage(151, 0, "╗");
             print.PrintMessage(151, 6, "╣");
             print.PrintMessage(151, 8, "╣");
-            print.PrintMessage(111, 8, "╚");
+            print.PrintMessage(131, 8, "╚");
         }
     }
 }

@@ -64,17 +64,15 @@ namespace TextAdventureCS
             PrintMessage(3, 49, messageregels[7]);
             PrintMessage(3, 50, messageregels[8]);
         }
-        public void PrinteMessageGameDate(Player player)
+        public void PrinteMessageGameDate(string date)
         {
-            string date = player.;
             PrintMessage(132, 1, date);
         }
-        public void PrinteMessageGameTime()
+        public void PrinteMessageGameTime(string time)
         {
-            string time;
             PrintMessage(132, 3, time);
         }
-        public void PrinteMessageGameMony()
+        public void PrinteMessageGameMoney()
         {
         }
         public void PrinteMessageGameName()

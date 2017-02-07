@@ -16,8 +16,9 @@ namespace TextAdventureCS
         private int dateMonths;
         private int dateDay;
         private Player p;
+        private Thread th;
 
-        public DateTime(Player player, int dateYears = 1, int dateMonths = 1, int dateDay = 1, int timeHours = 12, int timeMin = 1, int timeSec = 1)
+        public DateTime(Player player, int dateYears = 0, int dateMonths = 0, int dateDay = 0, int timeHours = 0, int timeMin = 0, int timeSec = 1)
         {
             this.dateYears = dateYears;
             this.dateMonths = dateMonths;
@@ -26,16 +27,14 @@ namespace TextAdventureCS
             this.timeHours = timeHours;
             this.timeMin = timeMin;
             this.timeSec = timeSec;
-
             this.p = player;
-
-            this.TimeCount();
         }
 
-        private void TimeCount()
+        public void TimeCount()
         {
-
-            for(; this.dateYears < 66; this.dateYears++)
+            Printe print = new Printe();
+            print.PrinteMessageGameDate(GetDate());
+            for (; this.dateYears < 66; this.dateYears++)
             {
                 for(; this.dateMonths < 12; this.dateMonths++)
                 {
@@ -67,6 +66,7 @@ namespace TextAdventureCS
                                     //    Console.WriteLine("[Year: {0} Month: {1} Day: {2} || {3}:{4}:{5} ]", this.dateYears, this.dateMonths, this.dateDay, this.timeHours, this.timeMin, this.timeSec);
                                     //}
                                     Thread.Sleep(10);
+                                    print.PrinteMessageGameTime(GetTime());
                                 }
                                 this.timeSec = 1;
                             }
@@ -75,6 +75,7 @@ namespace TextAdventureCS
                             this.p.Tired();
                         }
                         this.timeHours = 00;
+                        print.PrinteMessageGameDate(GetDate());
                     }
                     this.dateDay = 1;
                 }
@@ -95,7 +96,7 @@ namespace TextAdventureCS
 
         public string GetDate()
         {
-            return ("Year: " + this.dateYears + " Month: "+ this.dateMonths +" Day: " + this.dateDay);
+            return ("Y: " + this.dateYears + " M: "+ this.dateMonths +" D: " + this.dateDay);
         }
     }
 }

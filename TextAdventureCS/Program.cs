@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 
 // Originally made by Sietse Dijks
 // Releasedate: 18-01-2014
@@ -15,9 +16,14 @@ namespace TextAdventureCS
     {
         static void Main(string[] args)
         {
+            Frames.FaceFrame frame = new Frames.FaceFrame();
             Player player = new Player("timo");
+            DateTime time = new DateTime(player);
+            Thread thread = new Thread(new ThreadStart(time.TimeCount));
+            thread.Start();
             Printe print = new Printe();
-            print.PrinteMessageGameDate(player);
+            Console.WriteLine("nou en");
+            Console.ReadKey();
         }
         //// Define the directions available to the player.
         //// Refactored by Michiel and Alex

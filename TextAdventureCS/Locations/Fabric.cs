@@ -5,17 +5,18 @@ using System.Text;
 
 namespace TextAdventureCS
 {
-    class Cliff : Location
+    class Fabric : Location
     {
-        public Cliff(string name)
+        public Fabric(string name)
             : base(name)
         {
+          
         }
 
         public override void Description()
         {
-            Console.WriteLine("You are standing in front of a cliff.");
-            Console.WriteLine("This is a dead end. You can only go back");
+            // Insert a nice description
+            Console.WriteLine("You are standing in front of the fabric...");
         }
     }
 }

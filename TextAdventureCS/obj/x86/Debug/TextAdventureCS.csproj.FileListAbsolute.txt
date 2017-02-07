@@ -18,3 +18,6 @@ C:\Users\School\Documents\school\leerjaar_1\Periode_3\projecten\Text-Adventure\T
 C:\Users\School\Documents\school\leerjaar_1\Periode_3\projecten\Text-Adventure\TextAdventureCS\bin\Debug\TextAdventureCS.exe
 C:\Users\School\Documents\school\leerjaar_1\Periode_3\projecten\Text-Adventure\TextAdventureCS\bin\Debug\TextAdventureCS.pdb
 C:\Users\School\Documents\school\leerjaar_1\Periode_3\projecten\Text-Adventure\TextAdventureCS\obj\x86\Debug\TextAdventureCS.csprojResolveAssemblyReference.cache
+C:\Users\Patrick\Documents\GitHub\Text-Adventure\TextAdventureCS\obj\x86\Debug\TextAdventureCS.csprojResolveAssemblyReference.cache
+C:\Users\Patrick\Documents\GitHub\Text-Adventure\TextAdventureCS\obj\x86\Debug\TextAdventureCS.exe
+C:\Users\Patrick\Documents\GitHub\Text-Adventure\TextAdventureCS\obj\x86\Debug\TextAdventureCS.pdb

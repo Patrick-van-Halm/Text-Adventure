@@ -9,22 +9,25 @@ namespace TextAdventureCS
     class Timer
     {
         private int minutes;
+        private int seconds;
 
-        public Timer(int minutes = 1)
+        public Timer(int minutes = 1, int seconds = 20)
         {
             this.minutes = minutes;
+            this.seconds = seconds;
         }
 
         public void Countdown()
         {
-            for (; minutes > -1; minutes--)
+            for (; this.minutes > -1; this.minutes--)
             {
-                for (int i = 59; i > -1; i--)
+                for (; this.seconds > -1; this.seconds--)
                 {
                     Console.Clear();
-                    Console.WriteLine("{0} Minutes {1} Seconds", minutes, i);
+                    Console.WriteLine("{0} Minutes {1} Seconds", this.minutes, this.seconds);
                     Thread.Sleep(200);
                 }
+                this.seconds = 59;
             }
         }
     }

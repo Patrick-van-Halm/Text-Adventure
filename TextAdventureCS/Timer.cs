@@ -10,22 +10,35 @@ namespace TextAdventureCS
     {
         private int minutes;
         private int seconds;
+        private int sleep;
+        private string sleepTheString;
+        /// <summary>
+        /// zet een timer
+        /// </summary>
+        /// <param name="interval">in seconde</param>
+        public Timer(float interval)
+        {
+            interval *= 1000;
+            if (interval % 1 == 0)
+            {
+                sleepTheString = interval.ToString();
+                int.TryParse(sleepTheString, out this.sleep);
+            }
+            else
+                this.sleep = 1000;
+        }
 
-        public Timer(int minutes = 1, int seconds = 20)
+        public void Countdown(int minutes, int seconds)
         {
             this.minutes = minutes;
             this.seconds = seconds;
-        }
-
-        public void Countdown()
-        {
             for (; this.minutes > -1; this.minutes--)
             {
                 for (; this.seconds > -1; this.seconds--)
                 {
                     Console.Clear();
                     Console.WriteLine("{0} Minutes {1} Seconds", this.minutes, this.seconds);
-                    Thread.Sleep(200);
+                    Thread.Sleep(sleep);
                 }
                 this.seconds = 59;
             }

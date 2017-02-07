@@ -64,9 +64,9 @@ namespace TextAdventureCS
             PrintMessage(3, 49, messageregels[7]);
             PrintMessage(3, 50, messageregels[8]);
         }
-        public void PrinteMessageGameDate()
+        public void PrinteMessageGameDate(Player player)
         {
-            string date;
+            string date = player.;
             PrintMessage(132, 1, date);
         }
         public void PrinteMessageGameTime()

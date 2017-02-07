@@ -15,6 +15,9 @@ namespace TextAdventureCS
     {
         static void Main(string[] args)
         {
+            Player player = new Player("timo");
+            Printe print = new Printe();
+            print.PrinteMessageGameDate(player);
         }
         //// Define the directions available to the player.
         //// Refactored by Michiel and Alex

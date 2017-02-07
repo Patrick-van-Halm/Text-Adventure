@@ -15,7 +15,8 @@ namespace TextAdventureCS
     {
         static void Main(string[] args)
         {
-            Timer timer = new Timer()
+            DateTime DT = new DateTime();
+            Console.ReadLine();
         }
         //// Define the directions available to the player.
         //// Refactored by Michiel and Alex

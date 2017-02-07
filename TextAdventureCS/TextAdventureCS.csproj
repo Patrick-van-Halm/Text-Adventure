@@ -46,6 +46,7 @@
     <Compile Include="Actor.cs" />
     <Compile Include="color\BackgroundColor.cs" />
     <Compile Include="color\FrontColor.cs" />
+    <Compile Include="DateTime.cs" />
     <Compile Include="Location.cs" />
     <Compile Include="Locations\Church.cs" />
     <Compile Include="Locations\Cliff.cs" />

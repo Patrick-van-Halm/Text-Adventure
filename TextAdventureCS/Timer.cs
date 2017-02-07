@@ -49,5 +49,6 @@ namespace TextAdventureCS
                 this.minutes = 59;
             }
         }
+        
     }
 }

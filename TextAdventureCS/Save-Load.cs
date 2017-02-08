@@ -102,5 +102,35 @@ namespace TextAdventureCS
             printe.PrinteMessageGameDate(DT.GetDate());
             printe.PrinteMessageGameTime(DT.GetTime());
         }
+
+
+        public void NewGame(string name)
+        {
+            this.nameState = name;
+            this.moneyState = 10;
+            this.healthState = 40;
+            this.hungerState = 40;
+            this.fatigueState = 40;
+            this.dateYState = 0;
+            this.dateMState = 0;
+            this.dateDState = 0;
+            this.timeHState = 0;
+            this.timeMState = 0;
+
+            using (StreamWriter writer = new StreamWriter("Savegame.DAT", false))
+            {
+                writer.WriteLine(nameState);
+                writer.WriteLine(moneyState);
+                writer.WriteLine(healthState);
+                writer.WriteLine(hungerState);
+                writer.WriteLine(fatigueState);
+                writer.WriteLine(dateYState);
+                writer.WriteLine(dateMState);
+                writer.WriteLine(dateDState);
+                writer.WriteLine(timeHState);
+                writer.WriteLine(timeMState);
+
+            }
+        }
     }
 }

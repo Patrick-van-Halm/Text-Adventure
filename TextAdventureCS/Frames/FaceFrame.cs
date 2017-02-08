@@ -16,42 +16,42 @@ namespace TextAdventureCS.Frames
             for (int i = 0; i < 151; i++)
             {
                 print.PrintMessage(i, 0, "═");
-                print.PrintMessage(i, 37, "═");
+                print.PrintMessage(i, 27, "═");
+                print.PrintMessage(i, 31, "═");
                 print.PrintMessage(i, 41, "═");
-                print.PrintMessage(i, 51, "═");
             }
-            for (int i = 0; i < 51; i++)
+            for (int i = 0; i < 41; i++)
             {
                 print.PrintMessage(0, i, "║");
                 print.PrintMessage(151, i, "║");
             }
             print.PrintMessage(0,0, "╔");
-            print.PrintMessage(0,51, "╚");
+            print.PrintMessage(0,41, "╚");
             print.PrintMessage(151,0, "╗");
-            print.PrintMessage(151,51, "╝"); 
-            print.PrintMessage(151, 37, "╣");
-            print.PrintMessage(0, 37, "╠");
-            print.PrintMessage(151, 41, "╣");
-            print.PrintMessage(0, 41, "╠");
+            print.PrintMessage(151,41, "╝"); 
+            print.PrintMessage(151, 27, "╣");
+            print.PrintMessage(0, 27, "╠");
+            print.PrintMessage(151, 31, "╣");
+            print.PrintMessage(0, 31, "╠");
 
-            print.PrintMessage(2,38, "╔");
-            print.PrintMessage(43, 38, "╗");
-            print.PrintMessage(2, 39, "║");
-            print.PrintMessage(43, 39, "║");
-            print.PrintMessage(2, 40, "╚");
-            print.PrintMessage(43, 40, "╝");
-            print.PrintMessage(53, 38, "╔");
-            print.PrintMessage(94, 38, "╗");
-            print.PrintMessage(53, 39, "║");
-            print.PrintMessage(94, 39, "║");
-            print.PrintMessage(53, 40, "╚");
-            print.PrintMessage(94, 40, "╝");
-            print.PrintMessage(104, 38, "╔");
-            print.PrintMessage(145, 38, "╗");
-            print.PrintMessage(104, 39, "║");
-            print.PrintMessage(145, 39, "║");
-            print.PrintMessage(104, 40, "╚");
-            print.PrintMessage(145, 40, "╝");
+            print.PrintMessage(2,28, "╔");
+            print.PrintMessage(43, 28, "╗");
+            print.PrintMessage(2, 29, "║");
+            print.PrintMessage(43, 29, "║");
+            print.PrintMessage(2, 30, "╚");
+            print.PrintMessage(43, 30, "╝");
+            print.PrintMessage(53, 28, "╔");
+            print.PrintMessage(94, 28, "╗");
+            print.PrintMessage(53, 29, "║");
+            print.PrintMessage(94, 29, "║");
+            print.PrintMessage(53, 30, "╚");
+            print.PrintMessage(94, 30, "╝");
+            print.PrintMessage(104, 28, "╔");
+            print.PrintMessage(145, 28, "╗");
+            print.PrintMessage(104, 29, "║");
+            print.PrintMessage(145, 29, "║");
+            print.PrintMessage(104, 30, "╚");
+            print.PrintMessage(145, 30, "╝");
             //vak boven
             for (int i = 0; i < 9; i++)
             {

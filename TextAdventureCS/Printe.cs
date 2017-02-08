@@ -54,15 +54,15 @@ namespace TextAdventureCS
                 this.messageregels[temp] = this.messageregels[i];
             }
             this.messageregels[8] = message;
-            PrintMessage(3, 42, messageregels[0]);
-            PrintMessage(3, 43, messageregels[1]);
-            PrintMessage(3, 44, messageregels[2]);
-            PrintMessage(3, 45, messageregels[3]); 
-            PrintMessage(3, 46, messageregels[4]);
-            PrintMessage(3, 47, messageregels[5]);
-            PrintMessage(3, 48, messageregels[6]);
-            PrintMessage(3, 49, messageregels[7]);
-            PrintMessage(3, 50, messageregels[8]);
+            PrintMessage(3, 32, messageregels[0]);
+            PrintMessage(3, 33, messageregels[1]);
+            PrintMessage(3, 34, messageregels[2]);
+            PrintMessage(3, 35, messageregels[3]); 
+            PrintMessage(3, 36, messageregels[4]);
+            PrintMessage(3, 37, messageregels[5]);
+            PrintMessage(3, 38, messageregels[6]);
+            PrintMessage(3, 39, messageregels[7]);
+            PrintMessage(3, 40, messageregels[8]);
         }
         public void PrinteMessageGameDate(string date)
         {
@@ -82,7 +82,7 @@ namespace TextAdventureCS
         }
         public void PrinteMassageGameHealth(int health)
         {
-            int corY = 39;
+            int corY = 29;
             int corX = 3;
             Printe print = new Printe();
             color.BackgroundColor background = new color.BackgroundColor();
@@ -114,7 +114,7 @@ namespace TextAdventureCS
         }
         public void PrinteMassageGameFatigue(int health)
         {
-            int corY = 39;
+            int corY = 29;
             int corX = 54;
             Printe print = new Printe();
             color.BackgroundColor background = new color.BackgroundColor();
@@ -146,7 +146,7 @@ namespace TextAdventureCS
         }
         public void PrinteMassageGameHunger(int health)
         {
-            int corY = 39;
+            int corY = 29;
             int corX = 105;
             Printe print = new Printe();
             color.BackgroundColor background = new color.BackgroundColor();

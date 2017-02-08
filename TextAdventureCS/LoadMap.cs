@@ -18,7 +18,7 @@ namespace TextAdventureCS
         private int[] corInt;
         public LoadMap()
         {
-            this.pathCity = @"C:\Users\School\Documents\school\leerjaar_1\Periode_3\projecten\Text-Adventure\TextAdventureCS\maps\map.txt";
+            this.pathCity = @"maps\map.txt";
             this.cut = ',';
         }
         public void LoadCity()

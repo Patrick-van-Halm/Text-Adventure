@@ -10,6 +10,9 @@ namespace TextAdventureCS
     class LoadMap
     {
         private string pathCity;
+        private string pathBar;
+        private string pathPopup;
+        private string pathSuper;
         private string map;
         private int lengtCor;
         private char cut;
@@ -18,12 +21,32 @@ namespace TextAdventureCS
         private int[] corInt;
         public LoadMap()
         {
+            this.pathBar = @"maps\bar.txt";
+            this.pathPopup = @"maps\popup.txt";
+            this.pathSuper = @"maps\suprmarkt.txt";
             this.pathCity = @"maps\map.txt";
             this.cut = ',';
         }
         public void LoadCity()
         {
             map = File.ReadAllText(pathCity);
+            CutMap();
+        }
+        public void LoadBar()
+        {
+            map = File.ReadAllText(pathBar);
+            CutMap();
+        }
+        public void LoadPopup(string question)
+        {
+            LoadPop_Up pop = new LoadPop_Up();
+            map = File.ReadAllText(pathPopup);
+            CutMap();
+            pop.PopUpYN(question);
+        }
+        public void LoadSuper()
+        {
+            map = File.ReadAllText(pathSuper);
             CutMap();
         }
         private void CutMap()

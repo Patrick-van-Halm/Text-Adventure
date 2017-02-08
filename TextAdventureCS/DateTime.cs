@@ -17,6 +17,7 @@ namespace TextAdventureCS
         private int dateDay;
         private Player p;
         private Save_Load SL;
+        private bool sleep;
 
         public DateTime(Save_Load SL, Player player, int dateYears = 0, int dateMonths = 0, int dateDay = 0, int timeHours = 0, int timeMin = 0, int timeSec = 1)
         {
@@ -67,6 +68,11 @@ namespace TextAdventureCS
                                     //    Console.WriteLine("[Year: {0} Month: {1} Day: {2} || {3}:{4}:{5} ]", this.dateYears, this.dateMonths, this.dateDay, this.timeHours, this.timeMin, this.timeSec);
                                     //}
                                     Thread.Sleep(10);
+                                    if (sleep)
+                                    {
+                                        Thread.Sleep(2000);
+                                        sleep = false;
+                                    }
                                 }
                                 this.timeSec = 1;
                                 print.PrinteMessageGameTime(GetTime());
@@ -85,6 +91,11 @@ namespace TextAdventureCS
                 this.dateMonths = 1;
             }
         }
+        public void Sleep()
+        {
+            sleep = true;
+        }
+
 
         public void AddHours(int hours)
         {

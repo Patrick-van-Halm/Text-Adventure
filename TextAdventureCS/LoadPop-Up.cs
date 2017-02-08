@@ -14,13 +14,21 @@ namespace TextAdventureCS
             
         }
 
-        public void PopUp(string question)
+        public void PopUpYN(string question)
         {
             Printe printe = new Printe();
             this.question = question;
-            printe.PrintMessage(50, 15, this.question, 14, 13);
-            printe.PrintMessage(50, 16, "1. Yes", 14, 13);
-            printe.PrintMessage(50, 17, "1. No", 14, 13);
+            if(this.question.Length > 34)
+            {
+                printe.PrintMessage(58, 8, this.question.Substring(0, 34), 14, 13);
+                printe.PrintMessage(58, 9, this.question.Substring(34), 14, 13);
+                printe.PrintMessage(70, 11, "Yes | No", 14, 13);
+            }
+            else
+            {
+                printe.PrintMessage(58, 8, this.question, 14, 13);
+                printe.PrintMessage(70, 9, "Yes | No", 14, 13);
+            }
         }
     }
 }

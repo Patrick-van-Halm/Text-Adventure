@@ -19,14 +19,13 @@ namespace TextAdventureCS
         {
             //Declare//
             Console.SetWindowSize(166, 44);
+            LoadMap map = new LoadMap();
             Frames.FaceFrame frame = new Frames.FaceFrame();
             Player player = new Player("timo");
             Save_Load SL = new Save_Load();
             DateTime time = new DateTime(SL, player);
             Thread thread = new Thread(new ThreadStart(time.TimeCount));
             Printe print = new Printe();
-            LoadMap map = new LoadMap();
-            LoadPop_Up pop = new LoadPop_Up();
             // End Of Declare//
 
             //Check savegame//
@@ -43,9 +42,8 @@ namespace TextAdventureCS
             //Start Code//
             thread.Start();
             Thread.Sleep(1000);
-            map.LoadCity();
+            map.LoadPopup("Do you wanna build a big big big  trump wall?");
             frame.BuildFrame();
-            //pop.PopUp("Test Question?");
             //player.Tired();
             //player.Tired();
             //player.Tired();

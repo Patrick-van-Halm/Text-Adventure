@@ -112,7 +112,7 @@ namespace TextAdventureCS
             background.setBackgroundColor(0);
             Console.WriteLine(' ');
         }
-        public void PrinteMassageGameFatigue(int health)
+        public void PrinteMassageGameFatigue(int fatigue)
         {
             int corY = 29;
             int corX = 54;
@@ -120,14 +120,14 @@ namespace TextAdventureCS
             color.BackgroundColor background = new color.BackgroundColor();
             for (int i = 0; i < 40; i++)
             {
-                if (health > 0)
+                if (fatigue > 0)
                 {
                     Console.SetCursorPosition(corX, corY);
                     background.setBackgroundColor(1);
                     Console.WriteLine(' ');
                     Console.SetCursorPosition(corXNull, corYNull);
                     background.setBackgroundColor(0);
-                    health -= 1;
+                    fatigue -= 1;
                     corX += 1;
                 }
                 else
@@ -144,7 +144,7 @@ namespace TextAdventureCS
             background.setBackgroundColor(0);
             Console.WriteLine(' ');
         }
-        public void PrinteMassageGameHunger(int health)
+        public void PrinteMassageGameHunger(int hunger)
         {
             int corY = 29;
             int corX = 105;
@@ -152,14 +152,14 @@ namespace TextAdventureCS
             color.BackgroundColor background = new color.BackgroundColor();
             for (int i = 0; i < 40; i++)
             {
-                if (health > 0)
+                if (hunger > 0)
                 {
                     Console.SetCursorPosition(corX, corY);
                     background.setBackgroundColor(15);
                     Console.WriteLine(' ');
                     Console.SetCursorPosition(corXNull, corYNull);
                     background.setBackgroundColor(0);
-                    health -= 1;
+                    hunger -= 1;
                     corX += 1;
                 }
                 else

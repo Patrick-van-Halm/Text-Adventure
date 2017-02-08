@@ -16,17 +16,27 @@ namespace TextAdventureCS
     {
         static void Main(string[] args)
         {
+            //Declare//
             Frames.FaceFrame frame = new Frames.FaceFrame();
             Player player = new Player("timo");
             DateTime time = new DateTime(player);
-            //Thread thread = new Thread(new ThreadStart(time.TimeCount));
-            //thread.Start();
-            //Thread.Sleep(1000);
+            Thread thread = new Thread(new ThreadStart(time.TimeCount));
             Printe print = new Printe();
-            player.TakeHit();
-            player.TakeHit();
-            player.TakeHit();
-            player.Eating(10);
+            // End Of Declare//
+
+
+            //Start Code//
+            thread.Start();
+            Thread.Sleep(1000);
+            player.Tired();
+            player.Tired();
+            player.Tired();
+            Thread.Sleep(5000);
+            player.Sleep(time);
+            //player.TakeHit();
+            //player.TakeHit();
+            //player.TakeHit();
+            //player.Eating(10);
             Console.ReadKey();
 
             //als je health gaat healen spreek dan niet de etens bar aan

@@ -37,11 +37,35 @@ namespace TextAdventureCS
 
         public void Tired()
         {
+            Printe printe = new Printe();
             this.fatigue -= 4;
+            printe.PrinteMassageGameFatigue(this.fatigue);
         }
         public void Hungry()
         {
+            Printe printe = new Printe();
             this.hunger -= 4;
+            printe.PrinteMassageGameHunger(this.hunger);
+        }
+
+        public void Sleep(DateTime DT)
+        {
+            Printe printe = new Printe();
+            if(this.fatigue < this.maxFatigue)
+            {
+                DT.AddHours(8);
+                int temp = this.maxFatigue - this.fatigue;
+                if(8 > temp)
+                {
+                    this.fatigue = maxFatigue;
+                    printe.PrinteMassageGameFatigue(this.fatigue);
+                }
+                else
+                {
+                    this.fatigue += 8;
+                    printe.PrinteMassageGameFatigue(this.fatigue);
+                }
+            }
         }
 
         public void Eating(int healthToAdd)

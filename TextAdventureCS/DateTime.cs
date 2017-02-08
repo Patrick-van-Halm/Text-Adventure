@@ -81,6 +81,12 @@ namespace TextAdventureCS
                 this.dateMonths = 1;
             }
         }
+
+        public void AddHours(int hours)
+        {
+            this.timeHours += hours;
+        }
+
         public string GetTime()
         {
             if(this.timeHours < 10 && this.timeMin < 10)

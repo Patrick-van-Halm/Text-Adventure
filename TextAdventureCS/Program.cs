@@ -26,6 +26,7 @@ namespace TextAdventureCS
             Thread thread = new Thread(new ThreadStart(time.TimeCount));
             Printe print = new Printe();
             LoadMap map = new LoadMap();
+            LoadPop_Up pop = new LoadPop_Up();
             // End Of Declare//
 
             //Check savegame//
@@ -44,6 +45,7 @@ namespace TextAdventureCS
             Thread.Sleep(1000);
             map.LoadCity();
             frame.BuildFrame();
+            //pop.PopUp("Test Question?");
             //player.Tired();
             //player.Tired();
             //player.Tired();

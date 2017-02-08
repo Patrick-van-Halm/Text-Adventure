@@ -17,6 +17,7 @@ namespace TextAdventureCS
     {
         static void Main(string[] args)
         {
+            RunGame rungame = new RunGame();
             //Declare//
             Console.SetWindowSize(166, 44);
             LoadMap map = new LoadMap();

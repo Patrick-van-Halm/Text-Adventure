@@ -19,7 +19,7 @@ namespace TextAdventureCS
 
             // ons huis
             LoadMap map = new LoadMap();
-
+            map.LoadHome();
             // inladen alles
 
             // loop en kies systeem hertekent als nodig

@@ -10,7 +10,7 @@ namespace TextAdventureCS.Frames
         public FaceFrame(){
             BuildFrame();
         }
-        private void BuildFrame()
+        public void BuildFrame()
         {
             Printe print = new Printe();
             for (int i = 0; i < 151; i++)

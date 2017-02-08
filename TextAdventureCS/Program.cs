@@ -25,6 +25,7 @@ namespace TextAdventureCS
             DateTime time = new DateTime(SL, player);
             Thread thread = new Thread(new ThreadStart(time.TimeCount));
             Printe print = new Printe();
+            LoadMap map = new LoadMap();
             // End Of Declare//
 
             //Check savegame//
@@ -41,6 +42,8 @@ namespace TextAdventureCS
             //Start Code//
             thread.Start();
             Thread.Sleep(1000);
+            map.LoadCity();
+            frame.BuildFrame();
             //player.Tired();
             //player.Tired();
             //player.Tired();

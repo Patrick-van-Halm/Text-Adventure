@@ -13,8 +13,9 @@ namespace TextAdventureCS
         private string map;
         private int lengtCor;
         private char cut;
-        List<string> cor = new List<string>();
-        List<int> corInt = new List<int>();
+        private string[] cor;
+        private string[] corString;
+        private int[] corInt;
         public LoadMap()
         {
             this.pathCity = @"C:\Users\School\Documents\school\leerjaar_1\Periode_3\projecten\Text-Adventure\TextAdventureCS\maps\map.txt";
@@ -23,19 +24,22 @@ namespace TextAdventureCS
         public void LoadCity()
         {
             map = File.ReadAllText(pathCity);
+            CutMap();
         }
-        public void CutMap()
+        private void CutMap()
         {
-            cor.Add(map.Split(cut));
+            cor = map.Split(cut);
+            DrawMap();
         }
-        public void DrawMap()
+        private void DrawMap()
         {
-            string temp;
-            lengtCor = cor.Last();
-            for (int i = 0; i < lengtCor; i++)
+            for (int i = 0; i < cor.Length; i++)
             {
-                temp = cor<i>;
-                corInt.Add(temp.split);
+                string temps = cor[i];
+                corString = temps.Split(' ');
+                corInt = Array.ConvertAll(corString, s => int.Parse(s));
+                Printe printe = new Printe();
+                printe.PrintMessage(corInt[0], corInt[1], " ", corInt[2], 0);
             }
         }
     }

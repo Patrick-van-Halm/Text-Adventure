@@ -73,7 +73,7 @@ namespace TextAdventureCS
                             }
                             this.timeMin = 1;
                             this.p.RegenHealth();
-                            this.p.Hungry();
+                            this.p.Hungry(p);
                             this.p.Tired();
                         }
                         this.timeHours = 00;
@@ -91,10 +91,18 @@ namespace TextAdventureCS
             for(int i = 0; i < hours; i++)
             {
                 this.p.RegenHealth();
-                this.p.Hungry(2);
+                this.p.Hungry(p, 2);
             }
             
         }
+
+        /*public void CheckIsAlive(Player PL, GameOver GO)
+        {
+            if (!PL.GetIsAlive())
+            {
+                GO.Run
+            }
+        }*/
 
         public void Work(int hours)
         {
@@ -102,7 +110,7 @@ namespace TextAdventureCS
             {
                 this.p.Tired();
                 this.p.RegenHealth();
-                this.p.Hungry(2);
+                this.p.Hungry(p, 2);
             }
 
         }

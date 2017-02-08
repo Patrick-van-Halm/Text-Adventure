@@ -67,11 +67,15 @@ namespace TextAdventureCS
 
         public override void TakeHit()
         {
-            if(health >= 3)
+            if(health > 0)
             {
                 Printe print = new Printe();
                 this.health -= 4;
                 print.PrinteMassageGameHealth(this.health);
+            }
+            else
+            {
+                this.isAlive = false;
             }
         //    if (health - damage < 0)
         //    {

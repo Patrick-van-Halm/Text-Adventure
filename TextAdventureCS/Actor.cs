@@ -14,7 +14,8 @@ namespace TextAdventureCS
         protected int maxHunger;
         protected int fatigue;
         protected int maxFatigue;
-        protected int money;       
+        protected int money;
+        protected bool isAlive;  
 
 
 
@@ -28,6 +29,7 @@ namespace TextAdventureCS
             this.maxFatigue = 40;
             this.fatigue = maxFatigue;
             this.money = 10;
+            this.isAlive = true;
             Printe printe = new Printe();
             printe.PrinteMessageGameName(name);
             printe.PrinteMassageGameHealth(this.health);
@@ -41,11 +43,21 @@ namespace TextAdventureCS
             this.fatigue -= 4;
             printe.PrinteMassageGameFatigue(this.fatigue);
         }
-        public void Hungry(int howMuch = 4)
+        public void Hungry(Player PL, int howMuch = 4)
         {
             Printe printe = new Printe();
-            this.hunger -= howMuch;
-            printe.PrinteMassageGameHunger(this.hunger);
+            if (howMuch < this.hunger)
+            {
+                this.hunger = 0;
+                PL.TakeHit();
+                printe.PrinteMassageGameHunger(this.hunger);
+                printe.PrinteMassageGameHealth(this.health);
+            }
+            else
+            {
+                this.hunger -= howMuch;
+                printe.PrinteMassageGameHunger(this.hunger);
+            }
         }
 
         public void Sleep(DateTime DT)
@@ -133,6 +145,11 @@ namespace TextAdventureCS
         public int GetMaxFatigue()
         {
             return this.maxFatigue;
+        }
+
+        public bool GetIsAlive()
+        {
+            return this.isAlive;
         }
 
         public void SetHealth(int health)

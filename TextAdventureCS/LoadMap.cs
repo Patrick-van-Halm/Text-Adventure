@@ -36,7 +36,6 @@ namespace TextAdventureCS
             {
                 temp = cor<i>;
                 corInt.Add(temp.split);
-                
             }
         }
     }

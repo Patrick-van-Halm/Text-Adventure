@@ -48,6 +48,8 @@
     <Compile Include="color\FrontColor.cs" />
     <Compile Include="DateTime.cs" />
     <Compile Include="Frames\FaceFrame.cs" />
+    <Compile Include="LoadMap.cs" />
+    <Compile Include="LoadPop-Up.cs" />
     <Compile Include="Location.cs" />
     <Compile Include="Map.cs" />
     <Compile Include="Objects.cs" />

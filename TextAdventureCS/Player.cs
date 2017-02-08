@@ -8,7 +8,6 @@ namespace TextAdventureCS
     class Player : Actor
     {
         private Dictionary<string, Objects> inventory;
-        private int money;
 
         public Player(string name)
             : base(name)
@@ -126,6 +125,11 @@ namespace TextAdventureCS
         public int GetMoney()
         {
             return this.money;
+        }
+
+        public void SetMoney(int money)
+        {
+            this.money = money;
         }
     }
 }

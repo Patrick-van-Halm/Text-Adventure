@@ -16,8 +16,9 @@ namespace TextAdventureCS
         private int dateMonths;
         private int dateDay;
         private Player p;
+        private Save_Load SL;
 
-        public DateTime(Player player, int dateYears = 0, int dateMonths = 0, int dateDay = 0, int timeHours = 0, int timeMin = 0, int timeSec = 1)
+        public DateTime(Save_Load SL, Player player, int dateYears = 0, int dateMonths = 0, int dateDay = 0, int timeHours = 0, int timeMin = 0, int timeSec = 1)
         {
             this.dateYears = dateYears;
             this.dateMonths = dateMonths;
@@ -27,6 +28,7 @@ namespace TextAdventureCS
             this.timeMin = timeMin;
             this.timeSec = timeSec;
             this.p = player;
+            this.SL = SL;
         }
 
         public void TimeCount()
@@ -75,6 +77,7 @@ namespace TextAdventureCS
                             this.p.Tired();
                         }
                         this.timeHours = 00;
+                        this.SL.Save(this, p);
                         print.PrinteMessageGameDate(GetDate());
                     }
                     this.dateDay = 1;
@@ -85,7 +88,23 @@ namespace TextAdventureCS
 
         public void AddHours(int hours)
         {
-            this.timeHours += hours;
+            for(int i = 0; i < hours; i++)
+            {
+                this.p.RegenHealth();
+                this.p.Hungry(2);
+            }
+            
+        }
+
+        public void Work(int hours)
+        {
+            for (int i = 0; i < hours; i++)
+            {
+                this.p.Tired();
+                this.p.RegenHealth();
+                this.p.Hungry(2);
+            }
+
         }
 
         public string GetTime()
@@ -108,6 +127,37 @@ namespace TextAdventureCS
         public string GetDate()
         {
             return ("Y: " + this.dateYears + " M: "+ this.dateMonths +" D: " + this.dateDay);
+        }
+
+        public int GetDateY()
+        {
+            return this.dateYears;
+        }
+        public int GetDateM()
+        {
+            return this.dateMonths;
+        }
+        public int GetDateD()
+        {
+            return this.dateDay;
+        }
+
+        public int GetTimeH()
+        {
+            return this.timeHours;
+        }
+
+        public void SetDate(int dateYears, int dateMonths, int dateDays)
+        {
+            this.dateYears = dateYears;
+            this.dateMonths = dateMonths;
+            this.dateDay = dateDays;
+        }
+
+        public void SetTime(int timeHours, int timeMins)
+        {
+            this.timeHours = timeHours;
+            this.timeMin = timeMins;
         }
     }
 }

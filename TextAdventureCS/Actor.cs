@@ -41,10 +41,10 @@ namespace TextAdventureCS
             this.fatigue -= 4;
             printe.PrinteMassageGameFatigue(this.fatigue);
         }
-        public void Hungry()
+        public void Hungry(int howMuch = 4)
         {
             Printe printe = new Printe();
-            this.hunger -= 4;
+            this.hunger -= howMuch;
             printe.PrinteMassageGameHunger(this.hunger);
         }
 
@@ -133,6 +133,21 @@ namespace TextAdventureCS
         public int GetMaxFatigue()
         {
             return this.maxFatigue;
+        }
+
+        public void SetHealth(int health)
+        {
+            this.health = health;
+        }
+
+        public void SetFatigue(int fatigue)
+        {
+            this.fatigue = fatigue;
+        }
+
+        public void SetHunger(int hunger)
+        {
+            this.hunger = hunger;
         }
        
     }

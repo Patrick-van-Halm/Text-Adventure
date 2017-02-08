@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading;
+using System.IO;
 
 // Originally made by Sietse Dijks
 // Releasedate: 18-01-2014
@@ -17,13 +18,25 @@ namespace TextAdventureCS
         static void Main(string[] args)
         {
             //Declare//
+            Console.SetWindowSize(166, 44);
             Frames.FaceFrame frame = new Frames.FaceFrame();
             Player player = new Player("timo");
-            DateTime time = new DateTime(player);
+            Save_Load SL = new Save_Load();
+            DateTime time = new DateTime(SL, player);
             Thread thread = new Thread(new ThreadStart(time.TimeCount));
             Printe print = new Printe();
             // End Of Declare//
 
+            //Check savegame//
+            if (File.Exists("Savegame.DAT"))
+            {
+                SL.Load(time, player);
+            }
+            else
+            {
+                SL.Save(time, player);
+            }
+            //End Check//
 
             //Start Code//
             thread.Start();
@@ -31,18 +44,18 @@ namespace TextAdventureCS
             //player.Tired();
             //player.Tired();
             //player.Tired();
-            player.Hungry();
-            player.Hungry();
-            player.Hungry();
-            player.Hungry();
-            Thread.Sleep(2000);
-            player.Eating(4);
-            player.TakeHit();
-            player.TakeHit();
-            player.TakeHit();
-            Thread.Sleep(2000);
-            player.Eating(8);
-            Thread.Sleep(5000);
+            //player.Hungry();
+            //player.Hungry();
+            //player.Hungry();
+            //player.Hungry();
+            //Thread.Sleep(2000);
+            //player.Eating(4);
+            //player.TakeHit();
+            //player.TakeHit();
+            //player.TakeHit();
+            //Thread.Sleep(2000);
+            //player.Eating(8);
+            //Thread.Sleep(5000);
             //player.Sleep(time);
             //player.TakeHit();
             //player.TakeHit();

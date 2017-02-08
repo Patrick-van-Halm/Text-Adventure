@@ -17,34 +17,22 @@ namespace TextAdventureCS
     {
         static void Main(string[] args)
         {
+            Console.SetWindowSize(166, 44);
             RunGame rungame = new RunGame();
             //Declare//
-            Console.SetWindowSize(166, 44);
-            LoadMap map = new LoadMap();
-            Frames.FaceFrame frame = new Frames.FaceFrame();
-            Player player = new Player("timo");
-            Save_Load SL = new Save_Load();
-            DateTime time = new DateTime(SL, player);
-            Thread thread = new Thread(new ThreadStart(time.TimeCount));
-            Printe print = new Printe();
+            
+            
+            
             // End Of Declare//
 
             //Check savegame//
-            if (File.Exists("Savegame.DAT"))
-            {
-                SL.Load(time, player);
-            }
-            else
-            {
-                SL.Save(time, player);
-            }
+            
             //End Check//
 
             //Start Code//
-            thread.Start();
-            Thread.Sleep(1000);
-            map.LoadFabric();
-            frame.BuildFrame();
+            
+            //map.LoadFabric();
+            //frame.BuildFrame();
             //player.Tired();
             //player.Tired();
             //player.Tired();
@@ -65,7 +53,6 @@ namespace TextAdventureCS
             //player.TakeHit();
             //player.TakeHit();
             //player.Eating(10);
-            Console.ReadKey();
 
             //als je health gaat healen spreek dan niet de etens bar aan
 

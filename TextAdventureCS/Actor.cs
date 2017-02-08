@@ -31,10 +31,6 @@ namespace TextAdventureCS
             this.money = 10;
             this.isAlive = true;
             Printe printe = new Printe();
-            printe.PrinteMessageGameName(name);
-            printe.PrinteMassageGameHealth(this.health);
-            printe.PrinteMassageGameFatigue(this.fatigue);
-            printe.PrinteMassageGameHunger(this.hunger);
         }
 
         public void Tired()

@@ -15,7 +15,6 @@ namespace TextAdventureCS
             inventory = new Dictionary<string, Objects>();
             this.money = 10;
             Printe printe = new Printe();
-            printe.PrinteMessageGameMoney(this.money);
         }
 
         public void DropItem(string itemName)

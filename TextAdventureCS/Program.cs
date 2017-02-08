@@ -28,11 +28,17 @@ namespace TextAdventureCS
             //Start Code//
             thread.Start();
             Thread.Sleep(1000);
-            player.Tired();
-            player.Tired();
-            player.Tired();
+            //player.Tired();
+            //player.Tired();
+            //player.Tired();
+            player.Hungry();
+            player.Hungry();
+            player.Hungry();
+            player.Hungry();
+            Thread.Sleep(2000);
+            player.Eating(4);
             Thread.Sleep(5000);
-            player.Sleep(time);
+            //player.Sleep(time);
             //player.TakeHit();
             //player.TakeHit();
             //player.TakeHit();

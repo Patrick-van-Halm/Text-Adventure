@@ -99,6 +99,11 @@ namespace TextAdventureCS
                 return ("hour: " + this.timeHours + " | min: " + this.timeMin);
         }
 
+        public int GetMins()
+        {
+            return this.timeMin;
+        }
+
         public string GetDate()
         {
             return ("Y: " + this.dateYears + " M: "+ this.dateMonths +" D: " + this.dateDay);

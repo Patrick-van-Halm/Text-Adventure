@@ -68,23 +68,48 @@ namespace TextAdventureCS
             }
         }
 
-        public void Eating(int healthToAdd)
+        public void Eating(int foodToAdd)
         {
             Printe printe = new Printe();
-            if (this.health < this.maxHealth)
+            if (this.hunger < this.maxHunger)
             {
-                int temp = this.maxHealth - this.health;
-                if(healthToAdd > temp)
+                int temp = this.maxHunger - this.hunger;
+                if(foodToAdd > temp)
                 {
-                    this.health = this.maxHealth;
-                    printe.PrinteMassageGameHealth(this.health);
+                    this.hunger = this.maxHunger;
+                    printe.PrinteMassageGameHunger(this.hunger);
                 }
                 else
                 {
-                    this.health += healthToAdd;
-                    printe.PrinteMassageGameHealth(this.health);
+                    this.health += foodToAdd;
+                    printe.PrinteMassageGameHunger(this.hunger);
                 }
             }
+        }
+
+        public void RegenHealth(DateTime DT)
+        {
+            Printe printe = new Printe();
+            if(this.hunger > 34)
+            {
+                int restHealth = this.maxHealth - this.health;
+                if (DT.GetMins() + 20 == 60)
+                {
+                    if(1 < restHealth)
+                    {
+                        this.health += 1;
+                    }
+
+                }
+                else if (DT.GetMins() == DT.GetMins() + 20)
+                {
+                    if (1 < restHealth)
+                    {
+                        this.health += 1;
+                    }
+                }
+            }
+            
         }
 
         public abstract void TakeHit();         

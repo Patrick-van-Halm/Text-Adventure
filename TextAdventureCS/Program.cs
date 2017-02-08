@@ -42,7 +42,7 @@ namespace TextAdventureCS
             //Start Code//
             thread.Start();
             Thread.Sleep(1000);
-            map.LoadPopup("Do you wanna build a big big big  trump wall?");
+            map.LoadFabric();
             frame.BuildFrame();
             //player.Tired();
             //player.Tired();

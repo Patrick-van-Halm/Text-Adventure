@@ -26,8 +26,10 @@ namespace TextAdventureCS
             player.TakeHit();
             player.TakeHit();
             player.TakeHit();
-            player.Eating(12);
+            player.Eating(10);
             Console.ReadKey();
+
+            //als je health gaat healen spreek dan niet de etens bar aan
 
         }
         //// Define the directions available to the player.

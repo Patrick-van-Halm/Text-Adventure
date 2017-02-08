@@ -53,12 +53,12 @@ namespace TextAdventureCS
                 if(healthToAdd > temp)
                 {
                     this.health = this.maxHealth;
-                    printe.PrinteMassageGameHunger(this.health);
+                    printe.PrinteMassageGameHealth(this.health);
                 }
                 else
                 {
                     this.health += healthToAdd;
-                    printe.PrinteMassageGameHunger(this.health);
+                    printe.PrinteMassageGameHealth(this.health);
                 }
             }
         }

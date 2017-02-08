@@ -81,33 +81,19 @@ namespace TextAdventureCS
                 }
                 else
                 {
-                    this.health += foodToAdd;
+                    this.hunger += foodToAdd;
                     printe.PrinteMassageGameHunger(this.hunger);
                 }
             }
         }
 
-        public void RegenHealth(DateTime DT)
+        public void RegenHealth()
         {
             Printe printe = new Printe();
-            if(this.hunger > 34)
+            if(this.hunger > 29 && this.health != this.maxHealth)
             {
-                int restHealth = this.maxHealth - this.health;
-                if (DT.GetMins() + 20 == 60)
-                {
-                    if(1 < restHealth)
-                    {
-                        this.health += 1;
-                    }
-
-                }
-                else if (DT.GetMins() == DT.GetMins() + 20)
-                {
-                    if (1 < restHealth)
-                    {
-                        this.health += 1;
-                    }
-                }
+                this.health += 1;
+                printe.PrinteMassageGameHealth(this.health);
             }
             
         }

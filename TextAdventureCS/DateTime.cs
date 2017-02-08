@@ -70,6 +70,7 @@ namespace TextAdventureCS
                                 print.PrinteMessageGameTime(GetTime());
                             }
                             this.timeMin = 1;
+                            this.p.RegenHealth();
                             this.p.Hungry();
                             this.p.Tired();
                         }

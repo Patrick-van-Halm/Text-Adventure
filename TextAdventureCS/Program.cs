@@ -37,6 +37,11 @@ namespace TextAdventureCS
             player.Hungry();
             Thread.Sleep(2000);
             player.Eating(4);
+            player.TakeHit();
+            player.TakeHit();
+            player.TakeHit();
+            Thread.Sleep(2000);
+            player.Eating(8);
             Thread.Sleep(5000);
             //player.Sleep(time);
             //player.TakeHit();

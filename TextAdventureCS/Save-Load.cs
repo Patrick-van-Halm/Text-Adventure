@@ -8,6 +8,7 @@ namespace TextAdventureCS
 {
     class Save_Load
     {
+        private string nameState;
         private int moneyState;
         private int timeHState;
         private int timeMState;
@@ -25,6 +26,7 @@ namespace TextAdventureCS
 
         public void Save(DateTime DT, Player PL)
         {
+            this.nameState = PL.GetName();
             this.moneyState = PL.GetMoney();
             this.healthState = PL.GetHealth();
             this.hungerState = PL.GetHunger();
@@ -38,6 +40,7 @@ namespace TextAdventureCS
             {
                 using (StreamWriter writer = new StreamWriter("Savegame.DAT", false))
                 {
+                    writer.WriteLine(nameState);
                     writer.WriteLine(moneyState);
                     writer.WriteLine(healthState);
                     writer.WriteLine(hungerState);
@@ -63,6 +66,7 @@ namespace TextAdventureCS
             using (StreamReader sr = new StreamReader("Savegame.DAT"))
             {
                 string temp;
+                nameState = sr.ReadLine();
                 temp = sr.ReadLine();
                 int.TryParse(temp, out this.moneyState);
                 temp = sr.ReadLine();
@@ -82,6 +86,7 @@ namespace TextAdventureCS
                 temp = sr.ReadLine();
                 int.TryParse(temp, out this.timeMState);
             }
+            PL.SetName(this.nameState);
             PL.SetMoney(this.moneyState);
             PL.SetHealth(this.healthState);
             PL.SetHunger(this.hungerState);
@@ -89,6 +94,7 @@ namespace TextAdventureCS
             DT.SetDate(this.dateYState, this.dateMState, this.dateDState);
             DT.SetTime(this.timeHState, this.timeMState);
 
+            printe.PrinteMessageGameName(PL.GetName());
             printe.PrinteMassageGameFatigue(PL.GetFatigue());
             printe.PrinteMassageGameHealth(PL.GetHealth());
             printe.PrinteMassageGameHunger(PL.GetHunger());

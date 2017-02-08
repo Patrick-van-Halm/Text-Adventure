@@ -19,14 +19,16 @@ namespace TextAdventureCS
             Frames.FaceFrame frame = new Frames.FaceFrame();
             Player player = new Player("timo");
             DateTime time = new DateTime(player);
-            Thread thread = new Thread(new ThreadStart(time.TimeCount));
-            thread.Start();
-            Thread.Sleep(1000);
+            //Thread thread = new Thread(new ThreadStart(time.TimeCount));
+            //thread.Start();
+            //Thread.Sleep(1000);
             Printe print = new Printe();
             player.TakeHit();
             player.TakeHit();
             player.TakeHit();
+            player.Eating(12);
             Console.ReadKey();
+
         }
         //// Define the directions available to the player.
         //// Refactored by Michiel and Alex
